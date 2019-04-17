@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1000px;
+    /* background-color: #F8F5EB; */
+    background-color: #fff;
+    color: #1e1e31;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Verdana, sans-serif;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 25px;
+    margin-bottom: 100px;
+    /* text-align: right; */
+}
+
+#searchbox {
+    border: none;
+    border-bottom: 2px solid #1e1e31;
+    width: 150px;
+    text-align: left;
+    padding: 3px;
+    float: left;
+}
+
+#btnSearch {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.cart-header {
+    color: #1e1e31;
+    text-decoration: none;
+    float: right;
+}
+
+.cart-header:hover {
+    color: #EB2227;
+}
+
+.cart-header i {
+    font-size: 20px;
+}
+
+.logo {
+    width: 175px;
+    height: 175px;
+    color: #1e1e31;
+    display: block;
+    margin: 50px auto 0 auto;
+    line-height: 200px;
+    font-size: 175px;
+}
+
+nav.categories {
+    margin: 75px auto 75px auto;
+    width: 800px;
+    height: 300px;
+}
+
+nav.categories ul {
+    list-style: none;
+}
+
+nav.categories ul li {
+    float: left;
+    font-size: 24px;
+    text-align: center;
+    width: 45%;
+    height: 75px;
+    padding: 10px;
+}
+
+nav.categories ul li a {
+    text-decoration: none;
+    color: #1e1e31;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 75px;
+}
+
+nav.categories ul li a:hover {
+    background-color: #efefef;
+}
+
+.new {
+    clear: both;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    height: 700px;
+}
+
+.new h3 {
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+.new ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.new li {
+    width: 33%;
+    height: 300px;
+    float: left;
+}
+
+.new li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.new li a:hover img {
+    opacity: 1;
+}
+
+.new li a:hover h1 {
+    visibility: hidden;
+}
+
+.new li a h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    color: #1e1e31;
+}
+
+.new li a img {
+    opacity: .2;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    height: 42px;
+    background-color: #1e1e31;
+    position: relative;
+}
+
+footer nav {
+    display: table;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+}
+
+footer nav ul {
+    list-style: none;
+    display: table-cell;
+}
+
+footer nav ul li {
+    font-size: 14px;
+    color: white;
+    float: left;
+    margin-left: 50px;
+    line-height: 42px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+footer div {
+    color: white;
+    line-height: 42px;
+    font-size: 14px;
+    float: right;
+    margin-right: 15px;
+}
+
+/* product list */
+
+.content {
+    width: 100%;
+    min-height: 800px;
+    margin: 0 auto 75px auto;
+    overflow: auto;
+    position: relative;
+}
+
+.content nav {
+    float: left;
+    height: 100%;
+    width: 150px;
+    margin-right: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content nav ul {
+    list-style: none;
+}
+
+.content nav ul {
+    border-right: 1px solid #efefef;
+}
+
+.content nav ul li {
+    height: 60px;
+    width: 150px;
+}
+
+.content nav ul li a {
+    color: #1e1e31;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+}
+
+.content nav ul li a:hover {
+    background-color: #efefef;
+}
+
+.content .right-section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 800px;
+    height: 100%;
+}
+
+.content i {
+    font-size: 24px;
+}
+
+.product-list {
+    height: 100%;
+}
+
+.product-list ul {
+    list-style: none;
+    text-align: center;
+}
+
+.product-list ul li {
+    float: left;
+    width: 250px;
+    height: 250px;
+}
+
+.product-list ul li img {
+    width: 100%;
+    opacity: .2;
+}
+
+.product-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.product-list li a:hover img {
+    opacity: 1;
+}
+
+.product-list li a:hover h1 {
+    visibility: hidden;
+}
+
+.product-list li a h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    color: #1e1e31;
+}
+
+/* product-details */
+
+.product-details img {
+    float: left;
+    margin-right: 25px;
+}
+
+.product-details .product-details-right {
+    text-align: center;
+}
+
+.product-details .product-details-right h1 {
+    font-size: 38px;
+    padding: 10px;
+}
+
+.product-details .product-details-right h2 {
+    font-size: 22px;
+    padding: 5px;
+}
+
+.product-details .product-details-price {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.product-details .product-details-price a i {
+    font-size: 46px;
+    color: #1e1e31;
+    padding: 3px;
+}
+
+.product-details .product-details-description {
+    margin-top: 20px;
+}
+
+/* Cart */
+
+.cart-section {
+    color: #1e1e31;
+}
+
+.cart-section h1 {
+    margin: 10px 0 10px 10px;
+}
+
+#cart-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#cart-table tr {
+    border-top: 1px solid #1e1e31;
+    border-bottom: 1px solid #1e1e31;
+    height: 200px;
+}
+
+#cart-table tr td a {
+    color: #1e1e31;
+}
+
+#cart-table tr td a img {
+    height: 150px;
+    width: 150px;
+}
+
+.total-price {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    float: right;
+}
+
+.btns {
+    clear: both;
+    position: relative;
+    margin-top: 70px;
+}
+
+.btns a {
+    color: white;
+    background-color: #1e1e31;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.btns a:last-child {
+    margin-left: 543px;
+}

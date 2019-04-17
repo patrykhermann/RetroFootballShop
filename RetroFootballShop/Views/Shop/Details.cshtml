@@ -1,0 +1,37 @@
+﻿@model RetroFootballShop.Models.Product
+    @{
+        ViewBag.Title = "Details";
+        Layout = "~/Views/Shared/_ShopLayout.cshtml";
+    }
+
+    <div class="content">
+
+        @Html.Action("CategoriesMenu")
+
+        <div class="right-section">
+            <div>
+                <i class="fas fa-home"></i> @Html.MvcSiteMap().SiteMapPath()
+            </div>
+            <div class="product-details">
+                <img src="~/Content/Images/@Model.ImgFileName" alt="">
+                <div class="product-details-right">
+                    <h1>
+                        @Model.ClubName
+                    </h1>
+                    <h2>
+                        @Model.Year
+                    </h2>
+                </div>
+                <div class="product-details-price">
+                    <span>
+                        @Model.Price PLN
+                    </span>
+                    <a href="@Url.Action("AddToCart", "Cart", new { id = Model.ProductId })"><i class="fas fa-shopping-basket"></i></a>
+                </div>
+                <div class="product-details-description">
+                    @Model.Description
+                </div>
+            </div>
+        </div>
+    </div>
+

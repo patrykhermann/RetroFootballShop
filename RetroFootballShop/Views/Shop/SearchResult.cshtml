@@ -1,0 +1,29 @@
+﻿@model IEnumerable<RetroFootballShop.Models.Product>
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<div class="content">
+
+    @Html.Action("CategoriesMenu")
+
+    <div class="right-section">
+        <div>
+            <i class="fas fa-home"></i> @Html.MvcSiteMap().SiteMapPath()
+        </div>
+        <div class="product-list">
+            <ul>
+                @foreach (var itm in Model)
+                {
+                    <li>
+                        <a href="@Url.Action("Details","Shop", new { id = itm.ProductId })">
+                            <img src="~/Content/Images/@itm.ImgFileName" />
+                            <h1>@itm.ClubName (@itm.Year)</h1>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@model RetroFootballShop.ViewModels.CartViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<div class="content">
+
+    @Html.Action("CategoriesMenu", "Shop")
+
+    <div class="right-section">
+        <div>
+            <i class="fas fa-home"></i> @Html.MvcSiteMap().SiteMapPath()
+        </div>
+        <section class="cart-section">
+            <h1>Twój koszyk</h1>
+
+            <table id="cart-table">
+                @foreach (var cartItem in Model.CartItems)
+                {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Details", "Shop", new { id = cartItem.Product.ProductId })">
+                                <img src="~/Content/Images/@cartItem.Product.ImgFileName" alt="">
+                            </a>
+                        </td>
+                        <td>@cartItem.Product.ClubName @cartItem.Product.Year</td>
+                        <td>Ilość: @cartItem.Quantity</td>
+                        <td> @cartItem.TotalPrice zł</td>
+                        <td><a href="@Url.Action("RemoveFromCart", "Cart", new { id = cartItem.Product.ProductId })">Usuń</a></td>
+                    </tr>
+                }
+            </table>
+
+            @if (Model.CartItems.Count <= 0)
+            {
+                <div class="total-price">
+                    Twój koszyk jest pusty
+                </div>
+            }
+            else
+            {
+                <div class="total-price">
+                    Razem: @Model.TotalPrice zł
+                </div>
+            }
+
+
+            <div class="btns">
+                <a href="@Url.Action("List", "Shop", new { categoryname = "liga-angielska" })" class="continue">Kontynuuj zakupy</a>
+                @if (Model.TotalPrice > 0)
+                {
+                    <a href="@Url.Action("Checkout", "Cart")" class="pay">Zapłać</a>
+                }
+            </div>
+
+        </section>
+    </div>
+
+</div>
+

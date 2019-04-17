@@ -1,0 +1,14 @@
+﻿@model IEnumerable<RetroFootballShop.Models.League>
+
+<nav>
+    <ul>
+        @foreach(var category in Model)
+        {
+            <li>
+                <a href="@Url.Action("List", "Shop", new { categoryname = category.Name.ToLower().Replace(" ", "-") })">
+                    @category.Name
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
